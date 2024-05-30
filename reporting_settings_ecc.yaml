@@ -132,12 +132,12 @@ bq_independent_objects:
     type: table
     table_setting:
       load_frequency: "@yearly"
-  # Run every 10 minutes
+  # Run every 5 minutes
   - sql_file: SalesOrders.sql
     description: "Sales Orders Header and Items"
     type: table
     table_setting:
-      load_frequency: "*/10 * * * *"
+      load_frequency: "*/5 * * * *"
 
   - sql_file: Regions_T005S.sql
     description: "Regions (T005S)"
@@ -398,7 +398,7 @@ bq_dependent_objects:
     description: "Sales Orders Header and Items"
     type: table
     table_setting:
-      load_frequency: "*/10 * * * *"
+      load_frequency: "*/5 * * * *"
 
   - sql_file: SDStatus_Items.sql
     description: "Sales Document Status (Sales Doc, Delivery, Billing)"
